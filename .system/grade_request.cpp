@@ -187,7 +187,6 @@ void exam::grade_request(bool i)
             srand(time(NULL));
             double random = rand() % 6500000 + 250000;
             std::cout << "waiting..." << std::endl;
-            usleep(random);
         }
     }
 
@@ -206,7 +205,6 @@ void exam::grade_request(bool i)
     else
     {
         std::cout << RED << ">>>>>>>>>> FAILURE <<<<<<<<<<" << RESET << std::endl;
-        sleep(1);
         std::cout << "You have failed the assignment." << std::endl;
 
         // if there is a traceback file, create a folder traces and copy the file to it with the good name

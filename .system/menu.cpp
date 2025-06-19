@@ -20,7 +20,6 @@ void exam::exam_random_show(void)
             it = list_ex_lvl.begin();
         if (list_ex_lvl.size() == 1)
             break;
-        usleep(time);
         time += 10000;
     }
     std::cout << REMOVE_LINE;
@@ -31,7 +30,6 @@ void exam::exam_random_show(void)
         {
             std::cout << REMOVE_LINE;
             std::cout << "    " << YELLOW << current_ex->get_assignement() << RESET << ": " << LIME << current_ex->get_name() << RESET << " for " << i << " potential points (" << CYAN << "Current" << RESET << ")" << std::endl;
-            usleep(40000);
         }
     }
     std::cout << REMOVE_LINE;
@@ -165,26 +163,21 @@ void connexion(void)
     for (int i = 0; i < examsystem.length(); i++)
     {
         std::cout << examsystem[i];
-        usleep(70000);
         fflush(stdout);
     }
     std::cout << std::endl;
-    usleep(600000);
     system("clear");
     std::cout << BOLD << UNDERLINE << "ExamShell v2.1" << RESET << std::endl
               << std::endl;
     std::cout << BOLD << "login:" << RESET;
     fflush(stdout);
-    usleep(600000);
     std::string login = getenv("USER");
     for (int i = 0; i < login.size(); i++)
     {
-        usleep(100000);
         std::cout << login[i];
         fflush(stdout);
     }
 
-    usleep(400000);
     std::cout << std::endl
               << BOLD << "password:" << RESET;
     fflush(stdout);
@@ -192,7 +185,6 @@ void connexion(void)
     int password_size = rand() % 10 + 4;
     for (int i = 0; i < password_size; i++)
     {
-        usleep(150000);
         std::cout << "*";
         fflush(stdout);
     }

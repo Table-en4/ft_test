@@ -30,7 +30,6 @@ void CGVAcceptation(void)
         file.close();
         // thanks for accepting
         std::cout << "Thanks for accepting theses rules, and good luck for your exam!" << std::endl;
-        sleep(2);
     }
 }
 

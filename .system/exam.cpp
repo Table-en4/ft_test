@@ -17,7 +17,7 @@ std::map<int, exercise> exam::list_dir(void)
     if (dir == NULL)
     {
         std::cout << "Error: can't open directory" << get_path() << std::endl;
-        sleep(100);
+        sleep(1);
         return list;
     }
     while ((entry = readdir(dir)) != NULL)
