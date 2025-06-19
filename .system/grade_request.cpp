@@ -118,6 +118,7 @@ void exam::end_exam()
 }
 
 // ==> GradeMe function call by entering `grademe` into prompt
+// ==> GradeMe function call by entering `grademe` into prompt
 void exam::grademe(void)
 {
     if (file_exists(".system/grading/beta"))
@@ -147,6 +148,8 @@ void exam::grademe(void)
         sigd();
     if (input == "y" || input == "Y")
     {
+        // REMOVED TIME RESTRICTION CHECK - The following code block was removed:
+        /*
         if (current_ex->time_bef_grade > time(NULL) && waiting_time)
         {
             std::cout << RED << "ERROR: " << RESET << "You must wait at least " << YELLOW << BOLD;
@@ -157,6 +160,8 @@ void exam::grademe(void)
             std::cout << " until next grading request, so take your time to make more tests and be sure you will succeed next try!" << std::endl;
             return;
         }
+        */
+        
         std::cout << "Ok, making grading request to server now." << std::endl;
         grade_request(0);
     }

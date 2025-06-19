@@ -6,7 +6,7 @@
 #    By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/20 02:26:11 by jcluzet           #+#    #+#              #
-#    Updated: 2022/12/14 15:24:37 by jcluzet          ###   ########.fr        #
+#    Updated: 2025/06/19 11:28:14 by molapoug         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,12 +32,12 @@ PID=$!
 }  &>/dev/null
 
 # loop 1 second for 20 sec
-for i in {1..20}
+for i in {1..2}
 do
-    sleep 1
+    sleep 0
     # if PID is not running, then exit
     # if i is 5, 10, 15, 19 then echo "waiting..."
-    if [ "$i" -eq 5 ] || [ "$i" -eq 10 ] || [ "$i" -eq 15 ] || [ "$i" -eq 19 ]; then
+    if [ "$i" -eq 1 ] || [ "$i" -eq 1 ] || [ "$i" -eq 1 ] || [ "$i" -eq 1 ]; then
         echo "waiting..."
     fi
     if ! ps -p $PID > /dev/null

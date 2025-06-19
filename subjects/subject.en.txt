@@ -1,20 +1,18 @@
-Assignment name  : aff_a
-Expected files   : aff_a.c
+Assignment name  : rev_print
+Expected files   : rev_print.c
 Allowed functions: write
 --------------------------------------------------------------------------------
 
-Write a program that takes a string, and displays the first 'a' character it
-encounters in it, followed by a newline. If there are no 'a' characters in the
-string, the program just writes a newline. If the number of parameters is not
-1, the program displays 'a' followed by a newline.
+Write a program that takes a string, and displays the string in reverse
+followed by a newline.
 
-Example:
+If the number of parameters is not 1, the program displays a newline.
 
-$> ./aff_a "abc" | cat -e
-a$
-$> ./aff_a "dubO a POIL" | cat -e
-a$
-$> ./aff_a "zz sent le poney" | cat -e
+Examples:
+
+$> ./rev_print "zaz" | cat -e
+zaz$
+$> ./rev_print "dub0 a POIL" | cat -e
+LIOP a 0bud$
+$> ./rev_print | cat -e
 $
-$> ./aff_a | cat -e
-a$

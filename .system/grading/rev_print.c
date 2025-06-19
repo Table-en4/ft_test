@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   aff_a.c                                            :+:      :+:    :+:   */
+/*   rev_print.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
+/*   By: galpers <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/13 21:38:04 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/13 21:41:27 by fwuensch         ###   ########.fr       */
+/*   Created: 2022/04/06 15:18:11 by galpers           #+#    #+#             */
+/*   Updated: 2022/04/06 15:25:22 by galpers          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int		main(int argc, char **argv)
+int	main(int ac, char **av)
 {
-	if (argc != 2)
-		write(1, "a", 1);
-	else
+	int	i;
+
+	i = 0;
+	if (ac == 2)
 	{
-		while (*argv[1])
+		while(av[1][i] != '\0')
+			i++;
+		while (i >= 1)
 		{
-			if (*argv[1] == 'a')
-			{
-				write(1, "a", 1);
-				break;
-			}
-			argv[1]++;
+			write(1, &av[1][i - 1], 1);
+			i--;
 		}
 	}
 	write(1, "\n", 1);
-	return (0);
 }
